@@ -1,0 +1,57 @@
+
+<div style="width: 970px; min-height: 500px; padding: 30px; background-color: beige;">
+  <h1>Welcome to {{ title }}!</h1>
+      
+  <h4>Your Gold: {{this.gold}}</h4>
+  
+      <div style="margin-top: 40px;">
+         
+          <div style="width: 180px;height: 180px;background-color: 
+          lavender;display: inline-block;margin-left: 60px;">
+  
+            
+              <h3>Farm</h3>
+              <p>(earns 10-20 golds)</p>
+              <input type="hidden" name="farm" value="0">
+              <button (click)="onClick('farm')" class="find-btn" >Farm</button>
+      </div>
+  
+          
+          <div style="width: 180px;height: 180px;background-color: 
+          lavender;display: inline-block;margin-left: 40px;">
+              
+              <h3>Cave</h3>
+              <p>(earns 5-10 golds)</p>
+              <input type="hidden" name="cave" value="0">
+              <button (click)="onClick('cave')" class="find-btn" >Cave</button>
+          </div>
+  
+         
+          <div style="width: 180px;height: 180px;background-color: 
+          lavender;display: inline-block;margin-left: 40px;">
+              <h3>House</h3>
+              <p>(earns 2-5 golds)</p>
+              <input type="hidden" name="house" value="0">
+              <button (click)="onClick('house')" class="find-btn" >House</button>
+          </div>
+  
+          
+          <div style="width: 180px;height: 180px;background-color: 
+          lavender;display: inline-block;margin-left: 60px;">
+
+              <h3>Casino</h3>
+              <p>(earns/takes 0-50 golds)</p>
+              <input type="hidden" name="casino" value="0">
+              <button (click)="onClick('casino')" class="find-btn" >Casino</button>
+          </div>
+      </div>
+  
+      <label style="margin-top: 10px;margin-left: 30px;display: block;">Activities</label>
+      <div class="activity" style="margin-top: 5px; width: 880px; 
+      height: 200px;background-color: ivory;overflow: auto;">
+          <p style="padding-left: 15px; padding-top: 5px; 
+          text-align: left;white-space: pre-line;">
+            {{activity}}
+          </p>
+      </div>
+  </div>
