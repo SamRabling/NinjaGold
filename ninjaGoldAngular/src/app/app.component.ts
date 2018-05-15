@@ -43,16 +43,19 @@ export class AppComponent implements OnInit {
     else if ( event === 'casino'){
       let money = Math.floor(Math.random() * (50-10) -10);
       this.gold += money;
-      this.activity += `You earned ${money} at the ${event} \n` ;
-      if (this.gold < 0){
-        this.gold = 0;
+
+      if (money > 0){
+        this.activity += `You earned ${money} golds from the casino! \n`
       }
-      // session[:store_msg] += session[:msg] + "\n"
+      else {
+        this.activity += `You entered a casino and lost ${money} ... golds Ouch.. \n`
+      }  
+ 
       console.log(`Click Event Casino is workiong: ${event}, Gold ${this.gold}, activity ${this.activity} `);
     };
 
      
-    // findGold();
+    // getNinjaGold();
     //this data should be sent to the service as well as the activity 
   };
 

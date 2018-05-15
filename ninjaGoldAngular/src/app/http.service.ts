@@ -8,7 +8,7 @@ export class HttpService {
 
   constructor(private _http: HttpClient) { 
     this.getNinjaGold();
-    this.showGold();
+    // this.showGold();
 
    }
 
@@ -17,5 +17,5 @@ export class HttpService {
     return this._http.get('/gold')
    };
 
-   showGold(){};
+  //  showGold(){};
 }
